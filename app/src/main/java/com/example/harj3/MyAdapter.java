@@ -40,7 +40,8 @@ public class MyAdapter extends ArrayAdapter<Model> {
 
             DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm");
             String date = df.format(Calendar.getInstance().getTime());
-            tvDate.setText(date);
+            Model m = modelList.get(position);
+            tvDate.setText(m.date);
 
             imgDel.setOnClickListener(new View.OnClickListener() {
                 @Override
